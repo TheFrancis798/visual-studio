@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Como poner fondo en html con css */
+    background-image: url("../Linkedin/Imagenes/fondo\ uni.jpg");
+    /* cover, contain, auto */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    /*background: white; */
+    color: #000000;
+}
+
+/* Encabezado */
+header {
+    background: #f6f6f6 ;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+nav {
+    background: #6985a6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 30px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.8s ease;
+}
+
+nav a:hover {
+    background: #50568a;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Secciones */
+section {
+    background: rgb(165, 176, 238);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Subtitulo */
+section h2 {
+    color: #50568a;
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+form {
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 20px;
+    width: 700px;
+    margin: auto;
+    box-sizing: border-box;
+    box-shadow: 12px 12px 2px 1px #eec9a7;
+}
+.nombreApellido {
+    background-color: rgb(83, 83, 83);
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.edad {
+    background-color: rgb(83, 83, 83);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.Etiquetas {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(83, 83, 83);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.Inputpreferencias {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(83, 83, 83);
+    gap: 13.5px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.preferencias {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+    background-color: rgb(242, 248, 249);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+label {
+    width: 150px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input {
+    width: 300px;
+    height: 25px;
+    border: 1px solid#ccc;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+}

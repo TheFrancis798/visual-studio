@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mi formulario</title>
+    </head>
+    <body>
+        <form>
+             <br />
+            <label for="name">Ingresa tus nombres completos:</label>
+             <br />
+            <input 
+             type="text" 
+             id="nombre" 
+             name="nombre" 
+             placeholder="Ingresa tu nombre"
+           />
+           <br />
+           <label for="email">Ingresa tu correo electrónico:</label>
+            <br />
+           <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingresa tu correo electronico"
+            />
+             <br />
+            <label for="mensaje">Déjanos un comentario</label>
+             <br />
+            <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="escribe tu mensaje"
+            rows="4"
+            ></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>
