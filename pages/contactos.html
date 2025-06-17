@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../estilos/estilos.css" />
+    <title>Contacto - TIMELESS</title>
+</head>
+<body>
+
+    <!-- Encabezado con menú -->
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">TIMELESS</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="../imagenes pagina/2.png" class="menu-icono" alt="Menú" height="100">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../pages/mi app web.html">Inicio</a></li>
+                    <li><a href="../pages/servicios.html">Servicios</a></li>
+                    <li><a href="../pages/productos.html">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulario de contacto -->
+    <main class="container">
+        <section id="contacto" class="formulario-contacto">
+            <h2>Contáctanos</h2>
+            <form action="https://formsubmit.co/TU_CORREO_REAL@ejemplo.com" method="POST">
+                <!-- Opcionales: antispam y redirección -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://tuweb.com/gracias.html">
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" />
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí"></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Redes sociales -->
+    <footer class="redes">
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </footer>
+
+</body>
+</html>

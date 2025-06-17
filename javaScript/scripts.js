@@ -1,38 +1,63 @@
-function mostarPresentacion() {
-    const nombre = document.getElementById("nombre").value;
-    const edad = document.getElementById("edad").value;
-    const artista  = document.getElementById("artista").value;
-    const comida = document.getElementById("comida").value;
-    const cancion = document.getElementById("cancion").value;
+const carrito = document.getElementById('carrito');
+const elementos1 = document.getElementById('lista-1');
+const lista = document.querySelector('#lista-carrito tbody');
+const vaciarCarritobtn = document.getElementById('vaciar-carrito');
 
-    let generacion;
+cargarEventlisteners();
+function cargarEventlisteners(){
+    elementos1.addEventListener('click',comprarElemento);
+    carrito.addEventListener('click',EliminarElemento);
+    vaciarCarritobtn.addEventListener('click',vaciarElemento);
+}
+function comprarElemento(e){
+    if(e.target.classlista.contains ('agregar-carrito') ){
+        const elemento =e.target.parentElement.parentelement;
+        leerdatoselemento(elemento);
+    }
+}
 
-    if(edad >= 50){
-        generacion = "Baby Boomer";
+function leerdatoselemento(elemento){
+    const infoelemento={
+        imagen: elemento.querySelector('img').scr,
+        titulo: elemento.querySelector('h3').textcontent,
+        precio: elemento.querySelector('precio').textcontent,
+        id: elemento.querySelector('a').getElementById('data-id'),
+    }
+    function insertarcarrito(elemento){
+        const row= document.createElement('tr');
+        row.innerHTML = `
+        <td>
+        
+            <img src="${elemento.imagen}" width=100>
+        </td>
+        <td>
+            ${elemento.titulo}
+         </td>
+            ${elemento.precio}
+        <td>
+            <a herf"#" class="borrar" data-id = "${elemento.id}" >x </a>
+         </td>
+    `;
+    lista.appendChild(row);
 
-    } else if(edad >= 43) {
-        generacion = "Millenial";
-    } else if(edad >= 12) {
-        generacion = "Generacion z";
-    } else {
-        generacion = "Alpha";
+    function EliminarElemento(a){
+        e.preventdefault();
+        let elemento,
+        elementoid;
+        if (e.target.classlist.contains('borrar')){
+            e.target.parentelement.parentElement.remove();
+            elemento = e.target.parentElement.parentElement;
+            elementoid = elemento.querySelector('a').getElementById('data-id');
+        }
     }
 
-    const resultado =  `
-        <strong> Hola soy ${nombre} </strong>
-        <br>
-        tengo ${edad} años y pertenezco a la ${generacion} </strong>
-        <br><br>
-        mi artista favorito es: <em>${artista}</em><br>
-        mi comida favorito es:  <em>${comida}</em><br>
-        mi cancion favorito es: <em>${cancion}</em><br>
-        
-    
-    `;
 
 
-    document.getElementById("resultado").innerHTML= resultado;
-
-
-
+    }
+}
+function vaciarcarrito(){
+    while(lista.firstChild){
+        lista.removeChild(lista.firstChild)
+    }
+    return false;
 }
